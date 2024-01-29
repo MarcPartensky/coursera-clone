@@ -1,7 +1,7 @@
 version: "2"
 services:
   frontend:
-    env_file: "./Front-end/.env"
+    # env_file: "./Front-end/.env"
     build: ./Front-end
     stdin_open: true
     ports:
