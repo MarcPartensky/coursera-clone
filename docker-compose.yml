@@ -1,16 +1,16 @@
 version: "2"
 services:
-  frontend:
+  front:
     # env_file: "./Front-end/.env"
-    build: ./Front-end
+    build: front
     stdin_open: true
     ports:
       - "3000:3000"
     depends_on:
       - backend
-  backend:
-    env_file: "./Backend/.env"
-    build: ./Backend
+  back:
+    env_file: "./back/.env"
+    build: back
     ports:
       - "8080:8080"
     depends_on:
