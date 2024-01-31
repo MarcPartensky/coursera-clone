@@ -2,6 +2,7 @@ version: "2"
 services:
   front:
     # env_file: "./Front-end/.env"
+    image: marcpartensky/shelp-front
     build: front
     stdin_open: true
     ports:
@@ -9,6 +10,7 @@ services:
     depends_on:
       - back
   back:
+    image: marcpartensky/shelp-back
     env_file: "./back/.env"
     build: back
     ports:
